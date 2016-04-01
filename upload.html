@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/slide.css" />
+  <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/jasny/css/jasny-bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <!-- JS -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+  <script type="text/javascript" src="assets/jasny/js/jasny-bootstrap.min.js"></script>
+
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">LOGO</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html">หน้าแรก</a></li>
+          <li class="active"><a href="./upload.html">Upload</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ตัวอย่างโพย
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#poll1">แบบที่ 1</a></li>
+              <li><a href="#poll2">แบบที่ 2</a></li>
+              <li><a href="#poll3">แบบที่ 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#...">...</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#login">Login</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <!-- N-navbar -->
+
+  <!-- Header Carousel -->
+  <header id="myCarousel" class="carousel slide" style="margin-bottom: 20px;">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+          <div class="item active">
+              <div class="fill" style="background-image:url('http://www.playonepiece.me/uploads/article/images/one_piece_luffy_by_cheing.jpg');"></div>
+              <div class="carousel-caption">
+                  <h2>Caption 1</h2>
+              </div>
+          </div>
+          <div class="item">
+              <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+              <div class="carousel-caption">
+                  <h2>Caption 2</h2>
+              </div>
+          </div>
+          <div class="item">
+              <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+              <div class="carousel-caption">
+                  <h2>Caption 3</h2>
+              </div>
+          </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+      </a>
+  </header>
+  <script>
+  $('.carousel').carousel({
+      interval: 5000 //changes the speed
+  })
+  </script>
+  <!-- NHeader Carousel -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6">
+        <h2 align="center">รอบเช้า</h2>
+        <table id="" class="table table-striped table-bordered display" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+                <th rowspan="2" width="50%" class="table-header">รายการโพย</th>
+                <th colspan="2" width="50%" class="table-header">รูปแบบ</th>
+            </tr>
+            <tr>
+                <th width="25%" class="table-header">แบบเก่า</th>
+                <th width="25%" class="table-header">แบบใหม่</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-body-list">1 หน้ากระดาษ +สกอร์รวม</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-body-list">2 หน้ากระดาษ +สกอร์รวม</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-body-list">1 หน้ากระดาษ ธรรมดา</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+          <tbody>
+        </table>
+      </div>
+      <div class="col-xs-6">
+        <h2 align="center">รอบเย็น</h2>
+        <table id="" class="table table-striped table-bordered display" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+                <th rowspan="2" width="50%" class="table-header">รายการโพย</th>
+                <th colspan="2" width="50%" class="table-header">รูปแบบ</th>
+            </tr>
+            <tr>
+                <th width="25%" class="table-header">แบบเก่า</th>
+                <th width="25%" class="table-header">แบบใหม่</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-body-list">1 หน้ากระดาษ +สกอร์รวม</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-body-list">2 หน้ากระดาษ +สกอร์รวม</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="table-body-list">1 หน้ากระดาษ ธรรมดา</td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="table-download">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6" style="vertical-align: middle !important;">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-primary btn-file"><span class="fileinput-new">Word</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin: 0px !important;">
+                          <span class="btn btn-success btn-file"><span class="fileinput-new">Excel</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                          <span class="fileinput-filename"></span>
+                          <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+            </tr>
+          <tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+$(document).ready(function() {
+  $('table.display').DataTable({
+    "dom": "tr",
+    "bSort": false
+  });
+} );
+</script>
+
+</body>
+</html>
